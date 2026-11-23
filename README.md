@@ -2,6 +2,8 @@
 
 **Kariyer Pusulası**, adayların **hedef rol**, **deneyim seviyesi** (`Stajyer`, `Yeni Mezun`, `Junior`, `Mid-Level`, `Senior`, `Kariyer Değişimi`) ve varsa **iş ilanı / özgeçmiş** bilgilerine göre dinamik ve **sıralı mülakat simülasyonu** gerçekleştiren; her yanıttan sonra **STAR metoduna** dayalı yapılandırılmış geri bildirim sunan; CV geliştirme, yetkinlik boşluğu (skill gap), portfolyo projesi, eğitim/kurs ve hobi odaklı ücretsiz topluluk etkinliği önerileri üreten yapay zekâ destekli kariyer ve mülakat koçudur.
 
+**Canlı Uygulama (Render):** [https://kariyer-ve-m-lakat-ko-u.onrender.com/](https://kariyer-ve-m-lakat-ko-u.onrender.com/)
+
 ---
 
 ## Temel Özellikler ve Kriterler
@@ -33,10 +35,10 @@
 
 ## Canlı Demo ve Telefona Kurulum (PWA / Ana Ekrana Ekle)
 
-Uygulama Render üzerinde yayınlandığında masaüstü ve mobil tarayıcılardan doğrudan kullanılabilir:
+Uygulama Render üzerinde yayındadır ve masaüstü ile mobil tarayıcılardan doğrudan kullanılabilir:
 
 1. **Canlı Web Adresini Açma:**
-   - Render panelinizde servisinizin üst kısmında yer alan `https://<servis-adiniz>.onrender.com` bağlantısını telefonunuzun veya bilgisayarınızın tarayıcısında açın.
+   - Tarayıcınızdan **[https://kariyer-ve-m-lakat-ko-u.onrender.com/](https://kariyer-ve-m-lakat-ko-u.onrender.com/)** adresini açın.
    - *(Ücretsiz Render planında servis 15 dakika kullanılmadığında uyku moduna geçer; ilk açılışta uyanması 30–50 saniye sürebilir.)*
 
 2. **Android (Chrome) Üzerinden Telefona Kurulum:**
