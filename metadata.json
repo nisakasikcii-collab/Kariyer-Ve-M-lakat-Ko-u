@@ -1,0 +1,8 @@
+{
+  "name": "Kariyer Pusulası",
+  "description": "Hedef rol, deneyim seviyesi ve özgeçmişinize göre sırayla mülakat simülasyonu yapan, STAR metoduyla geri bildirim sunan, yetkinlik boşluğu, portfolyo, eğitim ve topluluk etkinlikleri öneren kariyer ve mülakat koçu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
