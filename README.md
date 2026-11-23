@@ -1,157 +1,135 @@
-# Kariyer Pusulası — Yapay Zekâ Destekli Kariyer ve Mülakat Koçu
+# Kariyer Pusulası
 
-**Kariyer Pusulası**, adayların hedefledikleri rol ve deneyim seviyesine göre dinamik, **sıralı** (soru-cevap-takip döngülü) mülakat simülasyonu sunan; her yanıttan sonra **STAR metodu** ile yapılandırılmış geri bildirim veren; CV geliştirme, yetkinlik boşluğu (skill gap), portfolyo projesi, eğitim/kurs ve hobi odaklı ücretsiz topluluk etkinliği önerileri hazırlayan tam yığın (full-stack) bir kariyer koçluğu uygulamasıdır.
-
-Öneriler, **Gemini (`gemini-4-hydrogen`)** ve **Google Search Grounding** (`googleSearch`) desteğiyle güncel web kaynaklarıyla doğrulanır; uydurma tarih, kontenjan veya sahte URL üretilmez.
+**Kariyer Pusulası**, adayların **hedef rol**, **deneyim seviyesi** (`Stajyer`, `Yeni Mezun`, `Junior`, `Mid-Level`, `Senior`, `Kariyer Değişimi`) ve varsa **iş ilanı / özgeçmiş** bilgilerine göre dinamik ve **sıralı mülakat simülasyonu** gerçekleştiren; her yanıttan sonra **STAR metoduna** dayalı yapılandırılmış geri bildirim sunan; CV geliştirme, yetkinlik boşluğu (skill gap), portfolyo projesi, eğitim/kurs ve hobi odaklı ücretsiz topluluk etkinliği önerileri üreten yapay zekâ destekli kariyer ve mülakat koçudur.
 
 ---
 
-## Temel Özellikler
+## Temel Özellikler ve Kriterler
 
-- **Aday Profili ve Akıllı Doğrulama**: Hedef rol, deneyim seviyesi (`Stajyer`, `Yeni Mezun`, `Junior`, `Mid-Level`, `Senior`, `Kariyer Değişimi`), iş ilanı metni, özgeçmiş özeti, ilgi alanları/hobiler, şehir ve etkinlik formatı (`Çevrimiçi`, `Yüz Yüze`, `Hibrit`) alınır. Eksik veya çok kısa girdilerde alan bazlı yönlendirmeler sunulur. Hızlı test için 3 hazır profil şablonu içerir.
-- **Sıralı Mülakat Simülasyonu**: Sorular tek seferde listelenmez; her aşamada tek bir soru yöneltilir. Adayın cevabına göre:
-  - **Güçlü Yönler** ve **Eksik Kalan Noktalar** listelenir.
-  - Cevap **STAR Metodu (Durum / Görev / Eylem / Sonuç)** çerçevesiyle yeniden yapılandırılır.
-  - **"Daha Güçlü Nasıl Söylenebilirdi?"** örnek yanıtı sunulur.
-  - Gerekli görüldüğünde **derinleştirici takip sorusu (follow-up)** açılır.
-  - Tespit edilen zayıf yetkinlikler oturum boyunca toplanarak eğitim önerilerine aktarılır.
-- **CV / Profil Geliştirme, Yetkinlik Boşluğu & Portfolyo Önerileri**: Hedef rol beklentileri ile adayın profilini karşılaştırarak öncelikli yetkinlik açıklarını, somut CV madde örneklerini ve uygulanabilir portfolyo projelerini üretir.
-- **Yetkinlik Odaklı Kurs ve Eğitim Önerileri**: Mülakatta veya profil analizinde öne çıkan eksiklere yönelik kurs/eğitim türlerini, neden seçildiğini (hangi açığı kapatacağını), platform/alan mantığını ve arama anahtar kelimelerini sunar.
-- **Hobi ve İlgi Alanı Odaklı Ücretsiz Etkinlik & Topluluklar**: Hobileri kariyerdeki **Sosyal Beceri**, **Üretkenlik** veya **İş-Yaşam Dengesi** katkısına bağlayan ücretsiz atölye, seminer ve topluluk formatları önerir. Şehir veya format eksikse kullanıcıdan ilgili detayı ister.
-- **Google Arama ile Doğrulanmış Kaynaklar**: Analiz, kurs ve topluluk önerilerinde `groundingMetadata.groundingChunks` üzerinden doğrulanan bağlantılar tıklanabilir kaynak listesi olarak gösterilir.
+### 1. Rol ve Seviye Odaklı Dinamik Sıralı Mülakat
+- Sorular tek seferde listelenmez; adayın profiline ve seviyesine göre **sırayla (tek tek)** sorulur.
+- Adayın verdiği cevabın derinliğine göre sistem gerek gördüğünde **derinleştirici takip sorusu (follow-up)** yöneltir.
+- Boş, çok kısa veya yetersiz girdilerde kullanıcıyı nazik ve yönlendirici uyarılarla doğru cevaba teşvik eder.
 
----
+### 2. STAR Metoduna Dayalı Geri Bildirim, CV ve Yetkinlik Analizi
+- Her mülakat yanıtının ardından çıktı şu net yapıda sunulur:
+  - **Güçlü Yönler**
+  - **Eksik Kalan Noktalar**
+  - **STAR Metodu Çerçevesi** (`Durum · Görev · Eylem · Sonuç`)
+  - **"Daha Güçlü Nasıl Söylenebilirdi?"** örnek yanıtı
+- **CV / Profil Geliştirme & Yetkinlik Boşluğu (Skill Gap) Analizi**: Hedef rol beklentileri ile adayın mevcut profili karşılaştırılarak önceliklendirilmiş eksikler, somut CV madde önerileri ve uygulanabilir portfolyo/proje fikirleri üretilir.
 
-## Teknoloji Yığını
+### 3. Zayıf Yetkinliklere Göre Gerekçeli Kurs ve Kaynak Önerileri
+- Mülakat sırasında zayıf kaldığı tespit edilen yetkinliklere (örneğin iletişim netliği, sunum, veri analizi, araç/teknoloji derinliği) ve hedef role göre somut eğitim/kaynak türleri önerilir.
+- Her öneride **neden bu kaynağın seçildiği ve hangi açığı kapatacağı** açıkça belirtilir; platform/alan mantığı ve doğrudan arama anahtar kelimeleri paylaşılır.
+- **Google Search Grounding (`gemini-4-hydrogen` + `googleSearch`)** desteğiyle güncel eğitim platformları doğrulanır ve doğrulanan web bağlantıları listelenir.
 
-| Katman | Teknoloji |
-| :--- | :--- |
-| **Arayüz** | React 19, TypeScript, Tailwind CSS v4, Lucide Icons |
-| **Derleyici** | Vite 8 (`@tailwindcss/vite`, `@vitejs/plugin-react`) |
-| **Sunucu** | Node.js 22+, Express 4, `tsx` |
-| **Yapay Zekâ** | `@google/genai` (`gemini-4-hydrogen` + `googleSearch` Grounding, `gemini-3.1-flash-lite` yedek model) |
-| **Test** | Node.js yerleşik test koşucusu (`node:test` + `tsx`) |
-
----
-
-## Proje Yapısı
-
-```text
-.
-├── .github/
-│   └── workflows/
-│       └── ci.yml                  # Otomatik lint, birim test ve derleme CI hattı
-├── src/
-│   ├── assets/images/              # Yerel görsel varlıklar (portre ve çalışma alanı kapağı)
-│   ├── components/
-│   │   ├── CareerAnalysisView.tsx  # CV iyileştirme, skill gap tablosu ve portfolyo önerileri
-│   │   ├── CoursesView.tsx         # Zayıf yetkinlik odaklı kurs ve arama anahtarları
-│   │   ├── EventsCommunityView.tsx # Hobi, şehir ve format odaklı topluluk etkinlikleri
-│   │   ├── GroundedSourcesList.tsx # Google Search Grounding doğrulama bağlantıları
-│   │   ├── InterviewCoachView.tsx  # Sıralı mülakat, STAR değerlendirmesi ve takip sorusu
-│   │   ├── ProfileSetupView.tsx    # Profil kurulum formu, doğrulama ve hazır şablonlar
-│   │   └── TopBar.tsx              # Üç bölgeli ana üst gezinme çubuğu
-│   ├── data/
-│   │   └── presets.ts              # Örnek aday profil şablonları
-│   ├── services/
-│   │   └── coachApi.ts             # Sunucu `/api/*` uç noktaları için istemci servisi
-│   ├── types/
-│   │   └── career.ts               # Paylaşılan TypeScript arayüzleri
-│   ├── utils/
-│   │   ├── grounding.ts            # Grounding URL temizleme ve tekilleştirme yardımcıları
-│   │   ├── grounding.test.ts       # Grounding birim testleri
-│   │   ├── validation.ts           # Form, mülakat yanıtı ve ilerleme hesaplama mantığı
-│   │   └── validation.test.ts      # Doğrulama ve ilerleme birim testleri
-│   ├── App.tsx                     # Ana uygulama durum yönetimi ve sekme koordinasyonu
-│   ├── index.css                   # Tailwind CSS v4 ve tipografi tanımları
-│   └── main.tsx                    # React giriş noktası
-├── .env.example                    # Örnek ortam değişkenleri şablonu
-├── .gitignore
-├── CONTRIBUTING.md
-├── LICENSE
-├── index.html
-├── metadata.json
-├── package.json
-├── server.ts                       # Express sunucusu, Gemini API rotaları ve Vite entegrasyonu
-├── tsconfig.json
-└── vite.config.ts
-```
+### 4. İlgi Alanları ve Hobilere Göre Ücretsiz Etkinlik ve Topluluk Önerileri
+- Kullanıcının ilgi alanlarına ve hobilerine göre ücretsiz atölyeler, seminerler, kulüp/topluluk buluşmaları veya açık etkinlik formatları önerilir.
+- Her öneri, adayın kariyerindeki **Sosyal Beceri**, **Üretkenlik** veya **İş-Yaşam Dengesi** katkısına bağlanır.
+- Emin olunmayan güncel tarih, kontenjan veya bağlantı uydurulmaz; gerektiğinde kullanıcıdan **şehir** ve **katılım formatı (Çevrimiçi / Yüz Yüze / Hibrit)** bilgisi istenir.
 
 ---
 
-## Kurulum ve Yerel Çalıştırma
+## Canlı Demo ve Telefona Kurulum (PWA / Ana Ekrana Ekle)
 
-### Ön Koşullar
+Uygulama Render üzerinde yayınlandığında masaüstü ve mobil tarayıcılardan doğrudan kullanılabilir:
 
-- **Node.js 22+** (yerleşik TypeScript desteği ve `node:test` için önerilir)
+1. **Canlı Web Adresini Açma:**
+   - Render panelinizde servisinizin üst kısmında yer alan `https://<servis-adiniz>.onrender.com` bağlantısını telefonunuzun veya bilgisayarınızın tarayıcısında açın.
+   - *(Ücretsiz Render planında servis 15 dakika kullanılmadığında uyku moduna geçer; ilk açılışta uyanması 30–50 saniye sürebilir.)*
+
+2. **Android (Chrome) Üzerinden Telefona Kurulum:**
+   - Web adresini Google Chrome ile açın.
+   - Sağ üst köşedeki **üç nokta (`⋮`)** menüsüne dokunun.
+   - **"Ana ekrana ekle"** (veya **"Uygulamayı yükle"**) seçeneğine basın ve onaylayın.
+   - Uygulama ana ekranınıza simge olarak eklenir ve tam ekran mobil deneyimiyle açılır.
+
+3. **iPhone / iPad (Safari) Üzerinden Telefona Kurulum:**
+   - Web adresini **Safari** tarayıcısı ile açın.
+   - Alt çubuktaki **Paylaş (`□↑`)** simgesine dokunun.
+   - Aşağı kaydırıp **"Ana Ekrana Ekle"** seçeneğine dokunun ve sağ üstten **"Ekle"** deyin.
+
+---
+
+## Yerel Kurulum ve Çalıştırma
+
+### Gereksinimler
+- **Node.js 22+** (`package.json` içindeki `engines` ayarı ile uyumlu)
 - Geçerli bir **Google Gemini API Anahtarı** (`GEMINI_API_KEY`)
 
-### 1. Depoyu Klonlayın ve Bağımlılıkları Yükleyin
+### Adım Adım Kurulum
 
-```bash
-git clone <depo-adresi>
-cd <proje-klasoru>
-npm install
-```
+1. **Depoyu klonlayın ve klasöre girin:**
+   ```bash
+   git clone <depo-adresi>
+   cd <proje-klasoru>
+   ```
 
-### 2. Ortam Değişkenlerini Yapılandırın
+2. **Bağımlılıkları yükleyin:**
+   ```bash
+   npm install
+   ```
 
-`.env.example` dosyasını `.env` olarak kopyalayın ve kendi API anahtarınızı ekleyin:
+3. **Ortam değişkenleri dosyasını oluşturun:**
+   ```bash
+   cp .env.example .env
+   ```
+   Oluşturduğunuz `.env` dosyasını açıp kendi Gemini API anahtarınızı ekleyin:
+   ```env
+   GEMINI_API_KEY="kendi_gemini_api_anahtariniz"
+   APP_URL="http://localhost:3000"
+   PORT="3000"
+   ```
 
-```bash
-cp .env.example .env
-```
+4. **Uygulamayı geliştirme modunda başlatın:**
+   ```bash
+   npm run dev
+   ```
+   Tarayıcınızdan `http://localhost:3000` adresine giderek uygulamayı kullanabilirsiniz.
 
-`.env` içeriği:
-
-```env
-GEMINI_API_KEY="kendi_gemini_api_anahtariniz"
-APP_URL="http://localhost:3000"
-PORT="3000"
-```
-
-> **Güvenlik Notu:** `GEMINI_API_KEY` yalnızca sunucu tarafında (`server.ts`) kullanılır; tarayıcı paketine gömülmez ve `.env` dosyası `.gitignore` ile hariç tutulur.
-
-### 3. Geliştirme Sunucusunu Başlatın
-
-```bash
-npm run dev
-```
-
-Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışır.
-
----
-
-## Komutlar
+### Faydalı Komutlar
 
 | Komut | Açıklama |
 | :--- | :--- |
-| `npm run dev` | Express API + Vite geliştirme sunucusunu port `3000` üzerinde başlatır |
-| `npm run lint` | `tsc --noEmit` ile tüm TypeScript tip denetimini çalıştırır |
+| `npm run dev` | Express arka uç + Vite geliştirme sunucusunu port `3000` üzerinde başlatır |
+| `npm run lint` | `tsc --noEmit` ile TypeScript tip kontrolünü çalıştırır |
 | `npm test` | `src/utils/*.test.ts` birim testlerini çalıştırır |
-| `npm run build` | Üretim arayüz paketini `dist/` klasörüne derler |
-| `npm start` | Üretim modunda (`NODE_ENV=production npm start`) sunucuyu başlatır |
+| `npm run build` | Üretim arayüz paketini `dist/` dizinine derler |
+| `NODE_ENV=production npm start` | Derlenmiş uygulamayı üretim modunda başlatır |
 
 ---
 
-## Sunucu API Uç Noktaları
+## Render Üzerinde Yayınlama (Özet)
 
-| Yöntem | Yol | Açıklama |
-| :--- | :--- | :--- |
-| `GET` | `/api/health` | Sunucu durumu ve `GEMINI_API_KEY` yapılandırma kontrolü |
-| `POST` | `/api/interview/start` | Aday profiline göre oturum planı ve ilk mülakat sorusunu üretir |
-| `POST` | `/api/interview/evaluate` | Adayın yanıtını STAR metoduyla değerlendirir, gerekirse takip sorusu önerir |
-| `POST` | `/api/interview/next` | Önceki yanıtlara göre sıradaki ana mülakat sorusunu üretir |
-| `POST` | `/api/career/analyze` | Google Search Grounding destekli CV, skill gap ve portfolyo analizi üretir |
-| `POST` | `/api/career/courses` | Zayıf yetkinliklere göre Google Search Grounding destekli kurs önerileri üretir |
-| `POST` | `/api/career/events` | Hobi, şehir ve formata göre ücretsiz etkinlik/topluluk önerileri üretir |
+- **Build Command:** `npm install --include=dev && npm run build`
+- **Start Command:** `NODE_ENV=production npm start`
+- **Environment Variables:** `GEMINI_API_KEY` (kendi anahtarınız) ve `NODE_ENV=production`
 
 ---
 
-## Katkıda Bulunma
+## Güvenlik Notu
 
-Katkı süreci için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına göz atabilirsiniz.
+- **API Anahtarlarını Koda Gömmeyin:** `GEMINI_API_KEY` yalnızca sunucu tarafında (`server.ts`) `process.env.GEMINI_API_KEY` üzerinden okunur; tarayıcı/istemci tarafındaki kodlara veya `README.md` / `.env.example` gibi dosyalara kesinlikle yazılmamalıdır.
+- **`.env` Dosyasını Koruyun:** Gerçek API anahtarınızı barındıran `.env` dosyası `.gitignore` içinde tanımlı `.env*` kuralı sayesinde GitHub’a gönderilmez (`!.env.example` şablonu hariç).
+- **Canlı Ortamlar:** Render veya AI Studio gibi barındırma platformlarında anahtarınızı yalnızca platformun **Environment Variables / Secrets** panelinden tanımlayın.
 
-## Lisans
+---
 
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+## Mimari Özeti
+
+```text
+├── .github/workflows/ci.yml        # Otomatik lint, test ve build CI hattı
+├── server.ts                       # Express API, Gemini (@google/genai) ve Google Search Grounding
+├── src/
+│   ├── App.tsx                     # Ana çalışma alanı ve sekme durum yönetimi
+│   ├── components/                 # Modüler arayüz bileşenleri (Profil, Mülakat, Analiz, Kurs, Etkinlik)
+│   ├── data/presets.ts             # Örnek aday profilleri
+│   ├── services/coachApi.ts        # İstemci API çağrı katmanı
+│   ├── types/career.ts             # Paylaşılan TypeScript tipleri
+│   └── utils/                      # Saf doğrulama, ilerleme ve grounding yardımcıları + birim testleri
+├── .env.example                    # Ortam değişkeni şablonu
+├── .gitignore
+├── LICENSE
+└── package.json
+```
